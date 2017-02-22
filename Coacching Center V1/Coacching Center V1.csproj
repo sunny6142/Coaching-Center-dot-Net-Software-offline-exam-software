@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F67027D2-B2F0-4638-AF4A-B3906BD9B47D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coacching_Center_V1</RootNamespace>
+    <AssemblyName>Coacching Center V1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddQues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQues.Designer.cs">
+      <DependentUpon>AddQues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet.cs">
+      <DependentUpon>CCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCoption.cs">
+      <DependentUpon>CCoption.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CCoption.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCoption.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSave.Designer.cs">
+      <DependentUpon>EditSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exam.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamcodeforResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamcodeforResult.Designer.cs">
+      <DependentUpon>ExamcodeforResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="examinfo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="examtile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>examtile.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logininfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>logininfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="login_info.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NExamData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NExamData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ques.Designer.cs">
+      <DependentUpon>ques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="questiontime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="questiontime.Designer.cs">
+      <DependentUpon>questiontime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData.cs">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="set.Designer.cs">
+      <DependentUpon>set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Std_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Std_home.Designer.cs">
+      <DependentUpon>Std_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Result.Designer.cs">
+      <DependentUpon>Student Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Question.Designer.cs">
+      <DependentUpon>View Question.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQues.resx">
+      <DependentUpon>AddQues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSave.resx">
+      <DependentUpon>EditSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamcodeforResult.resx">
+      <DependentUpon>ExamcodeforResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ques.resx">
+      <DependentUpon>ques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="questiontime.resx">
+      <DependentUpon>questiontime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="set.resx">
+      <DependentUpon>set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Std_home.resx">
+      <DependentUpon>Std_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Result.resx">
+      <DependentUpon>Student Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Question.resx">
+      <DependentUpon>View Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="AdminModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdminModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AdminModel.edmx.diagram">
+      <DependentUpon>AdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CCDataSet.xsc">
+      <DependentUpon>CCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet.xss">
+      <DependentUpon>CCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet1.xsc">
+      <DependentUpon>CCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet1.xss">
+      <DependentUpon>CCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet10.xsc">
+      <DependentUpon>CCDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet10.xss">
+      <DependentUpon>CCDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet11.xsc">
+      <DependentUpon>CCDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet11.xss">
+      <DependentUpon>CCDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet2.xsc">
+      <DependentUpon>CCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet2.xss">
+      <DependentUpon>CCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet3.xsc">
+      <DependentUpon>CCDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet3.xss">
+      <DependentUpon>CCDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet4.xsc">
+      <DependentUpon>CCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet4.xss">
+      <DependentUpon>CCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet5.xsc">
+      <DependentUpon>CCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet5.xss">
+      <DependentUpon>CCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet6.xsc">
+      <DependentUpon>CCDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet6.xss">
+      <DependentUpon>CCDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet7.xsc">
+      <DependentUpon>CCDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet7.xss">
+      <DependentUpon>CCDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet8.xsc">
+      <DependentUpon>CCDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet8.xss">
+      <DependentUpon>CCDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet9.xsc">
+      <DependentUpon>CCDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="CCDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCDataSet9.xss">
+      <DependentUpon>CCDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="CCoption.xsc">
+      <DependentUpon>CCoption.xsd</DependentUpon>
+    </None>
+    <None Include="CCoption.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCoption.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCoption.xss">
+      <DependentUpon>CCoption.xsd</DependentUpon>
+    </None>
+    <None Include="examtile.xsc">
+      <DependentUpon>examtile.xsd</DependentUpon>
+    </None>
+    <None Include="examtile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>examtile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="examtile.xss">
+      <DependentUpon>examtile.xsd</DependentUpon>
+    </None>
+    <None Include="logininfo.xsc">
+      <DependentUpon>logininfo.xsd</DependentUpon>
+    </None>
+    <None Include="logininfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>logininfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="logininfo.xss">
+      <DependentUpon>logininfo.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="NExamData.xsc">
+      <DependentUpon>NExamData.xsd</DependentUpon>
+    </None>
+    <None Include="NExamData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NExamData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NExamData.xss">
+      <DependentUpon>NExamData.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Coacching_Center_V1.examtileTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Coacching_Center_V1.examtileTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Coacching_Center_V1.examtileTableAdapters.titleTableAdapter.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdminModel.edmx</DependentUpon>
+      <LastGenOutput>AdminModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdminModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdminModel.edmx</DependentUpon>
+      <LastGenOutput>AdminModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\jkbkb.png" />
+    <None Include="Resources\G1600x500.jpg" />
+    <None Include="Resources\red-futuristic-background-the-red-viking-march-12763018.jpg" />
+    <None Include="ReportData.xsc">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </None>
+    <None Include="ReportData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportData.xss">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\120px-Avatar_graduate.png" />
+    <None Include="Resources\221H34594-70.png" />
+    <None Include="Resources\add-student-md.png" />
+    <None Include="Resources\12.jpg" />
+    <None Include="Resources\banner3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

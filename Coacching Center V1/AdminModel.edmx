@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CCModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CC.dbo.exam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="exam">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="examcode" />
+            <PropertyRef Name="time" />
+            <PropertyRef Name="qno" />
+            <PropertyRef Name="question" />
+            <PropertyRef Name="optiona" />
+            <PropertyRef Name="optionb" />
+            <PropertyRef Name="optionc" />
+            <PropertyRef Name="optiond" />
+            <PropertyRef Name="correctoption" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="examcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="time" Type="text" Nullable="false" />
+          <Property Name="qno" Type="int" Nullable="false" />
+          <Property Name="question" Type="text" Nullable="false" />
+          <Property Name="optiona" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optionb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optionc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optiond" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="correctoption" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CCModel1StoreContainer">
+          <EntitySet Name="exam" EntityType="Self.exam" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[exam].[Id] AS [Id], 
+[exam].[examcode] AS [examcode], 
+[exam].[time] AS [time], 
+[exam].[qno] AS [qno], 
+[exam].[question] AS [question], 
+[exam].[optiona] AS [optiona], 
+[exam].[optionb] AS [optionb], 
+[exam].[optionc] AS [optionc], 
+[exam].[optiond] AS [optiond], 
+[exam].[correctoption] AS [correctoption]
+FROM [dbo].[exam] AS [exam]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CCModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="exam">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="examcode" />
+            <PropertyRef Name="time" />
+            <PropertyRef Name="qno" />
+            <PropertyRef Name="question" />
+            <PropertyRef Name="optiona" />
+            <PropertyRef Name="optionb" />
+            <PropertyRef Name="optionc" />
+            <PropertyRef Name="optiond" />
+            <PropertyRef Name="correctoption" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="examcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qno" Type="Int32" Nullable="false" />
+          <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="optiona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optionb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optionc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optiond" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="correctoption" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CCEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="exams" EntityType="Self.exam" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CCModel1StoreContainer" CdmEntityContainer="CCEntities2">
+          <EntitySetMapping Name="exams">
+            <EntityTypeMapping TypeName="CCModel1.exam">
+              <MappingFragment StoreEntitySet="exam">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="examcode" ColumnName="examcode" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="qno" ColumnName="qno" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="optiona" ColumnName="optiona" />
+                <ScalarProperty Name="optionb" ColumnName="optionb" />
+                <ScalarProperty Name="optionc" ColumnName="optionc" />
+                <ScalarProperty Name="optiond" ColumnName="optiond" />
+                <ScalarProperty Name="correctoption" ColumnName="correctoption" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

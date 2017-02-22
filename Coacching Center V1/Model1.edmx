@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="exam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="examcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="time" Type="text" Nullable="false" />
+          <Property Name="qno" Type="int" Nullable="false" />
+          <Property Name="question" Type="text" Nullable="false" />
+          <Property Name="optiona" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optionb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optionc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="optiond" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="correctoption" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="examinfo">
+          <Key>
+            <PropertyRef Name="examcode" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="examcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="time" Type="int" />
+          <Property Name="numofques" Type="text" />
+        </EntityType>
+        <EntityType Name="login_info">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="courcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="examcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="qno" Type="int" />
+          <Property Name="attpt" Type="nvarchar" MaxLength="50" />
+          <Property Name="selectedoption" Type="nvarchar" MaxLength="50" />
+          <Property Name="correctornot" Type="nvarchar" MaxLength="50" />
+          <Property Name="marks" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CCModelStoreContainer">
+          <EntitySet Name="exam" EntityType="Self.exam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="examinfo" EntityType="Self.examinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="login_info" EntityType="Self.login_info" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="exam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="examcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qno" Type="Int32" Nullable="false" />
+          <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="optiona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optionb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optionc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="optiond" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="correctoption" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="examinfo">
+          <Key>
+            <PropertyRef Name="examcode" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="examcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time" Type="Int32" />
+          <Property Name="numofques" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="login_info">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="courcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="examcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="qno" Type="Int32" />
+          <Property Name="attpt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="selectedoption" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="correctornot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="marks" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CCEnt" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="exams" EntityType="Self.exam" />
+          <EntitySet Name="examinfoes" EntityType="Self.examinfo" />
+          <EntitySet Name="login_info" EntityType="Self.login_info" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CCModelStoreContainer" CdmEntityContainer="CCEnt">
+          <EntitySetMapping Name="exams">
+            <EntityTypeMapping TypeName="CCModel.exam">
+              <MappingFragment StoreEntitySet="exam">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="examcode" ColumnName="examcode" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="qno" ColumnName="qno" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="optiona" ColumnName="optiona" />
+                <ScalarProperty Name="optionb" ColumnName="optionb" />
+                <ScalarProperty Name="optionc" ColumnName="optionc" />
+                <ScalarProperty Name="optiond" ColumnName="optiond" />
+                <ScalarProperty Name="correctoption" ColumnName="correctoption" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="examinfoes">
+            <EntityTypeMapping TypeName="CCModel.examinfo">
+              <MappingFragment StoreEntitySet="examinfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="examcode" ColumnName="examcode" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="numofques" ColumnName="numofques" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="login_info">
+            <EntityTypeMapping TypeName="CCModel.login_info">
+              <MappingFragment StoreEntitySet="login_info">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="courcode" ColumnName="courcode" />
+                <ScalarProperty Name="examcode" ColumnName="examcode" />
+                <ScalarProperty Name="qno" ColumnName="qno" />
+                <ScalarProperty Name="attpt" ColumnName="attpt" />
+                <ScalarProperty Name="selectedoption" ColumnName="selectedoption" />
+                <ScalarProperty Name="correctornot" ColumnName="correctornot" />
+                <ScalarProperty Name="marks" ColumnName="marks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
