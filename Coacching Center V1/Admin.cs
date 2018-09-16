@@ -102,5 +102,18 @@ namespace Coacching_Center_V1
             button1.FlatAppearance.BorderColor = Color.DodgerBlue;
             button1.FlatAppearance.BorderSize = 3;
         }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (Startanexam st = new Startanexam())
+            {
+                st.ShowDialog();
+            }
+        }
     }
 }

@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.examcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.optionaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.optionbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.optioncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.optiondDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correctoptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.negmarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.examBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cCDataSet4 = new Coacching_Center_V1.CCDataSet4();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,16 +65,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ccDataSet101 = new Coacching_Center_V1.CCDataSet10();
-            this.examcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optionaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optionbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optioncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optiondDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correctoptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.negmarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCDataSet4)).BeginInit();
@@ -75,11 +78,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet81)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet101)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(380, 78);
+            this.button1.Location = new System.Drawing.Point(509, 78);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -115,6 +119,81 @@
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
+            // examcodeDataGridViewTextBoxColumn
+            // 
+            this.examcodeDataGridViewTextBoxColumn.DataPropertyName = "examcode";
+            this.examcodeDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.examcodeDataGridViewTextBoxColumn.HeaderText = "examcode";
+            this.examcodeDataGridViewTextBoxColumn.Name = "examcodeDataGridViewTextBoxColumn";
+            this.examcodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.examcodeDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // qnoDataGridViewTextBoxColumn
+            // 
+            this.qnoDataGridViewTextBoxColumn.DataPropertyName = "qno";
+            this.qnoDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.qnoDataGridViewTextBoxColumn.HeaderText = "Ques no";
+            this.qnoDataGridViewTextBoxColumn.Name = "qnoDataGridViewTextBoxColumn";
+            this.qnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qnoDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // questionDataGridViewTextBoxColumn
+            // 
+            this.questionDataGridViewTextBoxColumn.DataPropertyName = "question";
+            this.questionDataGridViewTextBoxColumn.HeaderText = "question";
+            this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
+            this.questionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.questionDataGridViewTextBoxColumn.Width = 500;
+            // 
+            // optionaDataGridViewTextBoxColumn
+            // 
+            this.optionaDataGridViewTextBoxColumn.DataPropertyName = "optiona";
+            this.optionaDataGridViewTextBoxColumn.HeaderText = "optiona";
+            this.optionaDataGridViewTextBoxColumn.Name = "optionaDataGridViewTextBoxColumn";
+            this.optionaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // optionbDataGridViewTextBoxColumn
+            // 
+            this.optionbDataGridViewTextBoxColumn.DataPropertyName = "optionb";
+            this.optionbDataGridViewTextBoxColumn.HeaderText = "optionb";
+            this.optionbDataGridViewTextBoxColumn.Name = "optionbDataGridViewTextBoxColumn";
+            this.optionbDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // optioncDataGridViewTextBoxColumn
+            // 
+            this.optioncDataGridViewTextBoxColumn.DataPropertyName = "optionc";
+            this.optioncDataGridViewTextBoxColumn.HeaderText = "optionc";
+            this.optioncDataGridViewTextBoxColumn.Name = "optioncDataGridViewTextBoxColumn";
+            this.optioncDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // optiondDataGridViewTextBoxColumn
+            // 
+            this.optiondDataGridViewTextBoxColumn.DataPropertyName = "optiond";
+            this.optiondDataGridViewTextBoxColumn.HeaderText = "optiond";
+            this.optiondDataGridViewTextBoxColumn.Name = "optiondDataGridViewTextBoxColumn";
+            this.optiondDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // correctoptionDataGridViewTextBoxColumn
+            // 
+            this.correctoptionDataGridViewTextBoxColumn.DataPropertyName = "correctoption";
+            this.correctoptionDataGridViewTextBoxColumn.HeaderText = "correctoption";
+            this.correctoptionDataGridViewTextBoxColumn.Name = "correctoptionDataGridViewTextBoxColumn";
+            this.correctoptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marksDataGridViewTextBoxColumn
+            // 
+            this.marksDataGridViewTextBoxColumn.DataPropertyName = "marks";
+            this.marksDataGridViewTextBoxColumn.HeaderText = "marks";
+            this.marksDataGridViewTextBoxColumn.Name = "marksDataGridViewTextBoxColumn";
+            this.marksDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // negmarks
+            // 
+            this.negmarks.DataPropertyName = "negmarks";
+            this.negmarks.HeaderText = "negmarks";
+            this.negmarks.Name = "negmarks";
+            this.negmarks.ReadOnly = true;
+            // 
             // examBindingSource1
             // 
             this.examBindingSource1.DataMember = "exam";
@@ -127,17 +206,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(472, 78);
+            this.button2.Location = new System.Drawing.Point(148, 78);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Add";
+            this.button2.Text = "Add Question";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(566, 78);
+            this.button3.Location = new System.Drawing.Point(603, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 0;
@@ -147,7 +226,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(657, 78);
+            this.button4.Location = new System.Drawing.Point(694, 78);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 0;
@@ -157,7 +236,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(747, 78);
+            this.button5.Location = new System.Drawing.Point(419, 78);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 0;
@@ -277,86 +356,36 @@
             this.ccDataSet101.DataSetName = "CCDataSet10";
             this.ccDataSet101.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // examcodeDataGridViewTextBoxColumn
+            // examBindingSource2
             // 
-            this.examcodeDataGridViewTextBoxColumn.DataPropertyName = "examcode";
-            this.examcodeDataGridViewTextBoxColumn.FillWeight = 60F;
-            this.examcodeDataGridViewTextBoxColumn.HeaderText = "examcode";
-            this.examcodeDataGridViewTextBoxColumn.Name = "examcodeDataGridViewTextBoxColumn";
-            this.examcodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.examcodeDataGridViewTextBoxColumn.Width = 70;
+            this.examBindingSource2.DataMember = "exam";
+            this.examBindingSource2.DataSource = this.cCDataSet5;
             // 
-            // qnoDataGridViewTextBoxColumn
+            // reportViewer1
             // 
-            this.qnoDataGridViewTextBoxColumn.DataPropertyName = "qno";
-            this.qnoDataGridViewTextBoxColumn.FillWeight = 60F;
-            this.qnoDataGridViewTextBoxColumn.HeaderText = "Ques no";
-            this.qnoDataGridViewTextBoxColumn.Name = "qnoDataGridViewTextBoxColumn";
-            this.qnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qnoDataGridViewTextBoxColumn.Width = 70;
+            this.reportViewer1.Location = new System.Drawing.Point(336, 187);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 6;
             // 
-            // questionDataGridViewTextBoxColumn
+            // button7
             // 
-            this.questionDataGridViewTextBoxColumn.DataPropertyName = "question";
-            this.questionDataGridViewTextBoxColumn.HeaderText = "question";
-            this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
-            this.questionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.questionDataGridViewTextBoxColumn.Width = 500;
-            // 
-            // optionaDataGridViewTextBoxColumn
-            // 
-            this.optionaDataGridViewTextBoxColumn.DataPropertyName = "optiona";
-            this.optionaDataGridViewTextBoxColumn.HeaderText = "optiona";
-            this.optionaDataGridViewTextBoxColumn.Name = "optionaDataGridViewTextBoxColumn";
-            this.optionaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // optionbDataGridViewTextBoxColumn
-            // 
-            this.optionbDataGridViewTextBoxColumn.DataPropertyName = "optionb";
-            this.optionbDataGridViewTextBoxColumn.HeaderText = "optionb";
-            this.optionbDataGridViewTextBoxColumn.Name = "optionbDataGridViewTextBoxColumn";
-            this.optionbDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // optioncDataGridViewTextBoxColumn
-            // 
-            this.optioncDataGridViewTextBoxColumn.DataPropertyName = "optionc";
-            this.optioncDataGridViewTextBoxColumn.HeaderText = "optionc";
-            this.optioncDataGridViewTextBoxColumn.Name = "optioncDataGridViewTextBoxColumn";
-            this.optioncDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // optiondDataGridViewTextBoxColumn
-            // 
-            this.optiondDataGridViewTextBoxColumn.DataPropertyName = "optiond";
-            this.optiondDataGridViewTextBoxColumn.HeaderText = "optiond";
-            this.optiondDataGridViewTextBoxColumn.Name = "optiondDataGridViewTextBoxColumn";
-            this.optiondDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correctoptionDataGridViewTextBoxColumn
-            // 
-            this.correctoptionDataGridViewTextBoxColumn.DataPropertyName = "correctoption";
-            this.correctoptionDataGridViewTextBoxColumn.HeaderText = "correctoption";
-            this.correctoptionDataGridViewTextBoxColumn.Name = "correctoptionDataGridViewTextBoxColumn";
-            this.correctoptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marksDataGridViewTextBoxColumn
-            // 
-            this.marksDataGridViewTextBoxColumn.DataPropertyName = "marks";
-            this.marksDataGridViewTextBoxColumn.HeaderText = "marks";
-            this.marksDataGridViewTextBoxColumn.Name = "marksDataGridViewTextBoxColumn";
-            this.marksDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // negmarks
-            // 
-            this.negmarks.DataPropertyName = "negmarks";
-            this.negmarks.HeaderText = "negmarks";
-            this.negmarks.Name = "negmarks";
-            this.negmarks.ReadOnly = true;
+            this.button7.Location = new System.Drawing.Point(23, 78);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(108, 23);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Conduct Exam";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // set
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 780);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
@@ -385,6 +414,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet81)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccDataSet101)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +458,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn correctoptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marksDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn negmarks;
+        private System.Windows.Forms.BindingSource examBindingSource2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button button7;
     }
 }

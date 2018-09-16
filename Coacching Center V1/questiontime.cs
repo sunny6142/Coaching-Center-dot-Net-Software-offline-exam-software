@@ -29,12 +29,12 @@ namespace Coacching_Center_V1
         private void button1_Click(object sender, EventArgs e)
         {
           
-            if (string.IsNullOrEmpty(textBox1.Text))
+            /*if (string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("Please Enter value", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox1.Focus();
                 return;
-            }
+            }*/
             if (string.IsNullOrEmpty(textBox2.Text))
             {
                 MessageBox.Show("Please Enter value", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -53,7 +53,7 @@ namespace Coacching_Center_V1
 
        //     MessageBox.Show(examcode, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            examtime = int.Parse(textBox1.Text.ToString());
+         //   examtime = int.Parse(textBox1.Text.ToString());
             titleTableAdapter.InsertQuery(textBox3.Text, examcode);
             this.Hide();
             using (AddQues addquestion = new AddQues())

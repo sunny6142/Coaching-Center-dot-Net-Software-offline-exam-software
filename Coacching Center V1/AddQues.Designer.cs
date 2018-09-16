@@ -66,6 +66,9 @@
             this.tableAdapterManager1 = new Coacching_Center_V1.CCDataSet4TableAdapters.TableAdapterManager();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cCDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCDataSet41)).BeginInit();
@@ -208,7 +211,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(689, 358);
+            this.button1.Location = new System.Drawing.Point(605, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -355,6 +358,33 @@
             this.textBox6.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(689, 358);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Complete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(553, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "&ExamSelection :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(642, 28);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 13;
+            // 
             // AddQues
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +392,9 @@
             this.BackgroundImage = global::Coacching_Center_V1.Properties.Resources.banner3;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(787, 405);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.richTextBox1);
@@ -439,5 +472,8 @@
         private CCDataSet4TableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -33,7 +33,7 @@ namespace Coacching_Center_V1
 
             this.titleTableAdapter.FillBytile(this.examtile.title, Form1.examcode);
 
-            conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
             this.titleTableAdapter.FillBytile(this.examtile.title, Form1.examcode);
 
@@ -140,7 +140,7 @@ namespace Coacching_Center_V1
             Change();
             if (q == 1)
                 button6.Hide();
-            conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
           
 
@@ -254,7 +254,7 @@ namespace Coacching_Center_V1
                     conn.Close();
                 }
             }
-            conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
 
              rdr = null;
@@ -317,7 +317,7 @@ namespace Coacching_Center_V1
            //     this.exam12TableAdapter.FillB(this.cCoption.exam12, ((int)(System.Convert.ChangeType(qnoToolStripTextBox.Text, typeof(int)))), Form1.examcode);
             //    this.exam13TableAdapter.FillC(this.cCoption.exam13, ((int)(System.Convert.ChangeType(qnoToolStripTextBox.Text, typeof(int)))), Form1.examcode);
                 groupBox1.Text = "Ques no. "+q.ToString();
-                conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+                conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
 
                 SqlDataReader rdr = null;
@@ -500,6 +500,11 @@ namespace Coacching_Center_V1
 
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             
@@ -586,7 +591,7 @@ namespace Coacching_Center_V1
            
             if(true)
              { 
-                conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+                conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
                 
                 SqlDataReader rdr = null;

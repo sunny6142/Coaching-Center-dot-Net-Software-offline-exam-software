@@ -64,7 +64,7 @@ namespace Coacching_Center_V1
                 return;
             }
             //////////////////////
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
             SqlDataReader rdr = null;
             
@@ -144,6 +144,11 @@ namespace Coacching_Center_V1
                 this.login_infoTableAdapter.Fill(this.logininfo.login_info);
 
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

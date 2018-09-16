@@ -23,17 +23,6 @@ namespace Coacching_Center_V1.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password" +
-            "=mypc107")]
-        public string CCConnectionString {
-            get {
-                return ((string)(this["CCConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("checkBox1")]
@@ -43,6 +32,27 @@ namespace Coacching_Center_V1.Properties {
             }
             set {
                 this["CC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=myp" +
+            "c107")]
+        public string CCConnectionString {
+            get {
+                return ((string)(this["CCConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.43.185,49172;Initial Catalog=CC;User ID=sa;Password=mypc107")]
+        public string CCConnectionString1 {
+            get {
+                return ((string)(this["CCConnectionString1"]));
             }
         }
     }

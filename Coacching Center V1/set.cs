@@ -21,10 +21,12 @@ namespace Coacching_Center_V1
 
         private void set_Load(object sender, EventArgs e)
         {
+            dataGridView1.Hide();
+
             // TODO: This line of code loads data into the 'cCDataSet8.StudentData' table. You can move, or remove it, as needed.
       //      this.studentDataTableAdapter.Fill(this.cCDataSet8.StudentData);
             // TODO: This line of code loads data into the 'cCDataSet4.exam' table. You can move, or remove it, as needed.
-            this.examTableAdapter1.Fill(this.cCDataSet4.exam);
+          //  this.examTableAdapter1.Fill(this.cCDataSet4.exam);
             // TODO: This line of code loads data into the 'cCDataSet5.exam' table. You can move, or remove it, as needed.
             //   this.examTableAdapter.Fill(this.cCDataSet5.exam);
          //   MessageBox.Show(dataGridView1.RowCount.ToString());
@@ -42,8 +44,9 @@ namespace Coacching_Center_V1
                 s10 = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
             }
 
+            this.reportViewer1.RefreshReport();
         }
-     
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             s1 = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -116,7 +119,13 @@ namespace Coacching_Center_V1
                    }  */
         }
 
-       
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (ConductExam ce = new ConductExam())
+            {
+                ce.ShowDialog();
+            }
+        }
 
         private void button8_Click(object sender, EventArgs e)
         {

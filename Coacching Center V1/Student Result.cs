@@ -25,10 +25,6 @@ namespace Coacching_Center_V1
         {
             // TODO: This line of code loads data into the 'reportData.Report' table. You can move, or remove it, as needed.
             this.reportTableAdapter.Fill(this.reportData.Report);
-            // TODO: This line of code loads data into the 'reportData.Report1' table. You can move, or remove it, as needed.
-            //   this.report1TableAdapter.Fill(this.reportData.Report1);
-            // TODO: This line of code loads data into the 'reportData.Report' table. You can move, or remove it, as needed.
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,14 +36,12 @@ namespace Coacching_Center_V1
                 textBox1.Focus();
                 return;
             }
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
 
 
             SqlDataReader rdr = null , rdr1 = null;
             try
-            {
-           //     reportTableAdapter.DeleteQueryReport();
-                // 2. Open the connection
+            {                                                                                                                                                                                                                           
                 conn.Open();
 
                      SqlCommand cmd2 = new SqlCommand("SELECT MAX(qno) FROM exam WHERE(examcode ='" + textBox1.Text.ToString() + "')", conn);
@@ -212,11 +206,19 @@ namespace Coacching_Center_V1
             
             this.reportViewer1.RefreshReport();
             this.reportTableAdapter.Fill(this.reportData.Report);
+      //      MessageBox.Show("OK", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+            this.Hide();
+            ad.Show();
         }
     }
 }

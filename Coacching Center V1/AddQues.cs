@@ -22,7 +22,7 @@ namespace Coacching_Center_V1
         public AddQues()
         {
             InitializeComponent();
-            conn = new SqlConnection("Data Source=DESKTOP-T6L7KFD\\SQLEXPRESS2016;Initial Catalog=CC;User ID=sa;Password=mypc107");
+            conn = new SqlConnection("Data Source=192.168.43.185,49172,49172;Initial Catalog=CC;User ID=sa;Password=mypc107");
             try
             {
                 // 2. Open the connection
@@ -253,6 +253,11 @@ namespace Coacching_Center_V1
             {
                 MessageBox.Show("Please Enter Decimal Number or Natural Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

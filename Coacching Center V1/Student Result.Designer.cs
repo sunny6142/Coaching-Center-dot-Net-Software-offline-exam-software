@@ -49,6 +49,7 @@
             this.report1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager1 = new Coacching_Center_V1.CCDataSet10TableAdapters.TableAdapterManager();
             this.report1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultBindingSource)).BeginInit();
@@ -178,12 +179,23 @@
             this.report1BindingSource2.DataMember = "Report1";
             this.report1BindingSource2.DataSource = this.reportData;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(304, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Home";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Student_Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(724, 536);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.BindingSource reportBindingSource1;
         private CCDataSet10TableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.BindingSource report1BindingSource2;
+        private System.Windows.Forms.Button button2;
     }
 }
